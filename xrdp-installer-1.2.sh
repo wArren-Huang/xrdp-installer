@@ -3,8 +3,9 @@
 # Script_Name : xrdp-installer-1.2.sh
 # Description : Perform xRDP installation on Ubuntu 16.04,18.04,19.04,19.10 and perform
 #               additional post configuration to improve end user experience
-# Date : November 2019
-# written by : Griffon
+# Date : Octover 2020
+# orginated by : Griffon
+# modified by : Warren Huang
 # WebSite :http://www.c-nergy.be - http://www.c-nergy.be/blog
 # Version : 1.2
 # History : 1.2   - Adding Support to Ubuntu 20.04 + Removed support for Ubuntu 19.04
@@ -336,11 +337,11 @@ echo
 echo
 
 # Step 1 - Enable Source Code Repository
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' main restricted'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-updates restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-backports main restricted universe multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-security main restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://archive.ubuntu.com/ubuntu/ '$codename' main restricted'
+sudo apt-add-repository -s 'deb http://archive.ubuntu.com/ubuntu/ '$codename' restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://archive.ubuntu.com/ubuntu/ '$codename'-updates restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://archive.ubuntu.com/ubuntu/ '$codename'-backports main restricted universe multiverse'
+sudo apt-add-repository -s 'deb http://archive.ubuntu.com/ubuntu/ '$codename'-security main restricted universe main multiverse'
 sudo apt-get update
 
 # Step 2 - Install Some PreReqs
